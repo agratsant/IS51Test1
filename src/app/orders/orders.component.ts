@@ -21,7 +21,34 @@ export class OrdersComponent implements OnInit {
   }
 
   async ngOnInit() {
-
+    this.loadDefaultOrders();
   }
 
+
+
+loadDefaultOrders() {
+  this.orders = [{
+    'pid': '1',
+    'image': 'assets/sm_android.jpeg',
+    'description': 'Android',
+    'price': 150.00,
+    'quantity': 2
+  }, {
+    'pid': '2',
+    'image': 'assets/sm_iphone.jpeg',
+    'description': 'IPhone',
+    'price': 200.00,
+    'quantity': 1
+  }, {
+    'pid': '3',
+    'image': 'assets/sm_windows.jpeg',
+    'description': 'Windows Phone',
+    'price': 110.00,
+    'quantity': 2
+  }];
+}
+
+
+delete(index: number) {
+  console.log('from delete() index is: ', index);
 }
